@@ -6,7 +6,7 @@ const { mySqlPool } = require("../config/db");
 const Create_Doctor_Table = async () => {
     try {
         const doctorTable = await mySqlPool.query(`
-            CREATE TABLE IF NOT EXISTS doctor (
+            CREATE TABLE IF NOT EXISTS doctor1 (
                 id INT AUTO_INCREMENT PRIMARY KEY, 
                 email VARCHAR(50) NOT NULL UNIQUE,
                 password VARCHAR(100) NOT NULL,

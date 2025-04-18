@@ -20,7 +20,7 @@ const admin_Doctor_Login_Controller = async (req, res) => {
 
         // Check admin first
         const [adminData] = await mySqlPool.query(
-            "SELECT * FROM admin WHERE email=?",
+            "SELECT * FROM admin1 WHERE email=?",
             [email]
         );
 
@@ -56,7 +56,7 @@ const admin_Doctor_Login_Controller = async (req, res) => {
 
         // Check doctor if not admin
         const [doctorData] = await mySqlPool.query(
-            "SELECT * FROM doctor WHERE email=?",
+            "SELECT * FROM doctor1 WHERE email=?",
             [email]
         );
 

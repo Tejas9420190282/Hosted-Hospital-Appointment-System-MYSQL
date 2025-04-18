@@ -21,7 +21,7 @@ const login_User_Controler = async (req, res) => {
         }
 
         const [userResult] = await mySqlPool.query(
-            "SELECT * FROM user WHERE email=?",
+            "SELECT * FROM user1 WHERE email=?",
             [email]
         );
 

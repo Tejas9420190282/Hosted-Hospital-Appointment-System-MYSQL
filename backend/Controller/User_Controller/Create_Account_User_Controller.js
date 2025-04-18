@@ -20,7 +20,7 @@ const create_Account_User_Controller = async (req, res) => {
             })
         }
 
-        const [isUser] = await mySqlPool.query("SELECT * FROM user WHERE email=?", [email]); 
+        const [isUser] = await mySqlPool.query("SELECT * FROM user1 WHERE email=?", [email]); 
 
         if (isUser.length > 0) {
             
@@ -38,7 +38,7 @@ const create_Account_User_Controller = async (req, res) => {
 
         console.log(hashPassword);
         
-        await mySqlPool.query("INSERT INTO user (name, email, password) VALUES (?,?,?)", [name, email, hashPassword])
+        await mySqlPool.query("INSERT INTO user1 (name, email, password) VALUES (?,?,?)", [name, email, hashPassword])
 
         console.log("Account created Successfully".bgGreen);
         

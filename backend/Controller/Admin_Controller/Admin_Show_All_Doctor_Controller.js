@@ -7,7 +7,7 @@ const admin_Show_All_Doctors_Controller = async (req, res) => {
 
     try {
 
-        const [allDoctors] = await mySqlPool.query("SELECT id, email, password, name, contact, doctor_type, education, education_place, experience, about, fees, img, start_time, end_time FROM doctor");
+        const [allDoctors] = await mySqlPool.query("SELECT id, email, password, name, contact, doctor_type, education, education_place, experience, about, fees, img, start_time, end_time FROM doctor1");
 
         if (!allDoctors || allDoctors.length === 0) {
             console.log("Doctors Data not Available".bgRed);

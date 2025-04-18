@@ -52,7 +52,7 @@ const createSlotsForDoctor = async (doctorId, startTime, endTime, slotDuration =
         
         // Batch insert slots
         await mySqlPool.query(
-            "INSERT INTO slote (start_time, end_time, status, doctor_id) VALUES ?",
+            "INSERT INTO slote1 (start_time, end_time, status, doctor_id) VALUES ?",
             [slots]
         );
         

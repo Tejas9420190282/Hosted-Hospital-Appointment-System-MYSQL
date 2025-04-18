@@ -21,7 +21,7 @@ const create_Patient_Data_Controller = async (req, res) => {
             })
         }
 
-        const [patientData] = await mySqlPool.query("INSERT INTO patient ( name, contact, address, doctor_id) VALUES (?, ?, ?, ?)", [name, contact, address, id]);
+        const [patientData] = await mySqlPool.query("INSERT INTO patient1 ( name, contact, address, doctor_id) VALUES (?, ?, ?, ?)", [name, contact, address, id]);
 
         const patientId = patientData.insertId;
 

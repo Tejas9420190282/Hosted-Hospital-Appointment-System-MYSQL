@@ -12,9 +12,9 @@ function Payment() {
     const [selectedDate, setSelectedDate] = useState(null);
     const [message, setMessage] = useState("");
 
-    const doctorName = sessionStorage.getItem("nameOfDoctor");
+    const nameOfDoctor = sessionStorage.getItem("nameOfDoctor");
 
-    console.log(doctorName);
+    console.log(nameOfDoctor);
 
     const nevigate = useNavigate();
 
@@ -111,7 +111,7 @@ function Payment() {
                 key: "rzp_test_6Pg8m8ifI60Xmi",
                 amount: orderResponse.data.order.amount,
                 currency: "INR",
-                name: `Dr. ${doctorName}`,
+                name: `Dr. ${nameOfDoctor}`,
                 description: "Appointment Booking",
                 order_id: orderResponse.data.order.id,
                 handler: handlePaymentSuccess, // Updated handler

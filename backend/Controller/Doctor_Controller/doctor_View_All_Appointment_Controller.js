@@ -9,7 +9,7 @@ const doctor_View_All_Appointment_Controller = async (req, res) => {
         const { doctorId } = req.body;
 
         const [appointments] = await mySqlPool.query(
-            "SELECT patient.name, patient.contact, patient.address, appointment.date, slote.start_time, slote.end_time FROM appointment JOIN patient ON appointment.patient_id = patient.id JOIN slote ON appointment.slote_id = slote.id WHERE appointment.doctor_id = ?",
+            "SELECT patient1.name, patient1.contact, patient1.address, appointment1.date, slote1.start_time, slote1.end_time FROM appointment1 JOIN patient1 ON appointment1.patient_id = patient1.id JOIN slote1 ON appointment.slote_id = slote1.id WHERE appointment1.doctor_id = ?",
             [doctorId]
         );
 

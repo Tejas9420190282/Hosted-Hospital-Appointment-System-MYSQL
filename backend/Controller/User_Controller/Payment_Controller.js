@@ -72,7 +72,7 @@ const payment_Controller = async (req, res) => {
 
         // Create appointment first
         const [appointmentResult] = await mySqlPool.query(
-            "INSERT INTO appointment (date, slote_id, doctor_id, patient_id ) VALUES (?, ?, ?, ?)",
+            "INSERT INTO appointment1 (date, slote_id, doctor_id, patient_id ) VALUES (?, ?, ?, ?)",
             [date, slotId, doctorId, patientId]
         );
 
@@ -91,10 +91,10 @@ const payment_Controller = async (req, res) => {
                 d.fees,
                 s.start_time,
                 s.end_time
-            FROM appointment a
-            JOIN patient p ON a.patient_id = p.id
-            JOIN doctor d ON a.doctor_id = d.id
-            JOIN slote s ON a.slote_id = s.id
+            FROM appointment1 a
+            JOIN patient1 p ON a.patient_id = p.id
+            JOIN doctor1 d ON a.doctor_id = d.id
+            JOIN slote1 s ON a.slote_id = s.id
             WHERE a.id = ?
         `,
             [appointmentResult.insertId]

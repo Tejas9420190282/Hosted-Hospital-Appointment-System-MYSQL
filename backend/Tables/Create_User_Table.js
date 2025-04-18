@@ -1,12 +1,13 @@
 
 // create_User_Table.js (Node)
+
 const { mySqlPool } = require("../config/db");
 require('colors'); // To use color formatting for console messages
 
 const create_User_Table = async () => {
     try {
         await mySqlPool.query(`
-            CREATE TABLE IF NOT EXISTS user (
+            CREATE TABLE IF NOT EXISTS user1 (
                 id INT PRIMARY KEY AUTO_INCREMENT, 
                 name VARCHAR(45), 
                 email VARCHAR(45) UNIQUE, 
@@ -22,4 +23,5 @@ const create_User_Table = async () => {
 }
 
 create_User_Table();
+
 

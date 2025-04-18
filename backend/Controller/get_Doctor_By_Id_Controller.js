@@ -8,7 +8,7 @@ const get_Doctor_By_Id_Controller = async (req, res) => {
 
         const {id} = req.params;
 
-        const [doctor] = await mySqlPool.query("SELECT * FROM doctor WHERE id=?", [id]);
+        const [doctor] = await mySqlPool.query("SELECT * FROM doctor1 WHERE id=?", [id]);
 
 
         if (!doctor || doctor.length === 0) {

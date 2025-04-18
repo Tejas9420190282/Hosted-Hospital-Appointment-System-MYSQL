@@ -76,7 +76,7 @@ const create_Doctor_Controller = async (req, res) => {
             });
         }
 
-        const [doctorData] = await mySqlPool.query("INSERT INTO doctor (email, password, name, contact, doctor_type, education, education_place, experience, about, fees, img, start_time, end_time) values (?,?,?,?,?,?,?,?,?,?,?,?,?)", [email, password,  name, contact, doctorType, education, educationPlace, experience, about, fees, imageUrl, startTime, endTime,])
+        const [doctorData] = await mySqlPool.query("INSERT INTO doctor1 (email, password, name, contact, doctor_type, education, education_place, experience, about, fees, img, start_time, end_time) values (?,?,?,?,?,?,?,?,?,?,?,?,?)", [email, password,  name, contact, doctorType, education, educationPlace, experience, about, fees, imageUrl, startTime, endTime,])
 
         if (doctorData.length == 0) {
             

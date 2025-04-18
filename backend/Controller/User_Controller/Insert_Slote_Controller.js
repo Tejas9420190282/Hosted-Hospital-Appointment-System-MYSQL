@@ -21,7 +21,7 @@ const insert_Slote_Controller = async (req, res) => {
         // shows slotes
        // const [slote] = await mySqlPool.query("SELECT * FROM slote WHERE doctor_id=?", [id]); 
  
-        const [slote] = await mySqlPool.query("SELECT s.* FROM slote s LEFT JOIN appointment a ON s.id = a.slote_id AND a.doctor_id = s.doctor_id AND a.date = ? WHERE s.doctor_id = ? ", [selectedDate, id]);
+        const [slote] = await mySqlPool.query("SELECT s.* FROM slote1 s LEFT JOIN appointment1 a ON s.id = a.slote_id AND a.doctor_id = s.doctor_id AND a.date = ? WHERE s.doctor_id = ? ", [selectedDate, id]);
  
 
         console.log("Slotes Shows Successfully");
@@ -29,7 +29,7 @@ const insert_Slote_Controller = async (req, res) => {
         console.log(slote);
 
         const [doctorFeesRows] = await mySqlPool.query(
-            "SELECT fees FROM doctor WHERE id = ?", 
+            "SELECT fees FROM doctor1 WHERE id = ?", 
             [id]
         );
 

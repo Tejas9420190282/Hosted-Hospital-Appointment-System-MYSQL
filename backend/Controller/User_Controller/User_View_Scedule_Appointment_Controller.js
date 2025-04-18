@@ -19,7 +19,7 @@ const User_View_Scedule_Appointment_Controller = async (req, res) => {
 
         // Fixed SQL syntax - removed extra comma after status
         const [slote] = await mySqlPool.query(
-            "SELECT start_time, end_time, status FROM slote WHERE id=? AND doctor_id=?",
+            "SELECT start_time, end_time, status FROM slote1 WHERE id=? AND doctor_id=?",
             [sloteId, doctorId]
         );
 
@@ -27,21 +27,21 @@ const User_View_Scedule_Appointment_Controller = async (req, res) => {
 
         // Fixed query - removed doctor_id condition since patient table doesn't need it
         const [patient] = await mySqlPool.query(
-            "SELECT name, contact, address FROM patient WHERE id=?",
+            "SELECT name, contact, address FROM patient1 WHERE id=?",
             [patientId]
         );
 
         console.log("Patient data fetched successfully");
 
         const [doctor] = await mySqlPool.query(
-            "SELECT email, name, contact, doctor_type, education, experience FROM doctor WHERE id=?",
+            "SELECT email, name, contact, doctor_type, education, experience FROM doctor1 WHERE id=?",
             [doctorId]
         );
 
         console.log("Doctor data fetched successfully");
 
         const [appointment] = await mySqlPool.query(
-            "SELECT date FROM appointment WHERE slote_id=? AND doctor_id=? AND patient_id=?",
+            "SELECT date FROM appointment1 WHERE slote_id=? AND doctor_id=? AND patient_id=?",
             [sloteId, doctorId, patientId]
         );
 
