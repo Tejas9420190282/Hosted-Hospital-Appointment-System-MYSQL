@@ -1,7 +1,9 @@
-
 {
     "build": {
-      "base": "backend",  
-      "builder": "nixpacks"  
+      "base": "backend",
+      "builder": "nixpacks",
+      "nixpacks": {
+        "provider": "node"
+      }
     }
   }
