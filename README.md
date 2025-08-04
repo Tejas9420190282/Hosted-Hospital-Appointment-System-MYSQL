@@ -4,12 +4,6 @@ A full-stack web application that allows users to book and manage hospital appoi
 
 ---
 
-## 🚀 Live Demo
-
-👉 [Hosted Link Here](#) <!-- Replace this with your Netlify/Render/other hosted link -->
-
----
-
 ## 📌 Features
 
 ### 👨‍⚕️ User Features:
