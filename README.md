@@ -37,15 +37,24 @@ A full-stack web application that allows users to book and manage hospital appoi
 ## 📁 Folder Structure
 
 ├── client/ # React Frontend
+│     ├
 │     ├── src/
+│     ├
 │     ├── public/
+│     ├
 │     └── ...
 ├── server/ # Node + Express Backend
+│     ├
 │     ├── controllers/
+│     ├
 │     ├── routes/
+│     ├
 │     ├── db.js # MySQL connection
+│     ├
 │     └── ...
+│     
 ├── package.json
+│     
 └── README.md
 
 
